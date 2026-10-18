@@ -45,17 +45,29 @@ Design decisions and trade-offs are in [docs/DESIGN.md](docs/DESIGN.md).
 
 ## Evaluations
 
-The service is scored on every push against 39 questions written the way residents ask them, plus 14 held-out questions that were never used for tuning ([`evals/`](evals)).
+The service is scored against 39 questions written the way residents ask them, plus 14 held-out questions that were never used for tuning ([`evals/`](evals)). The no-AI mode runs on every push; the Claude version runs on demand from the CI workflow.
 
-| Measure | Main set | Held-out set |
-|---|---|---|
-| Right outcome (answered, no answer, emergency, blocked) | 100% | 100% |
-| Right page in the top 3 search results | 100% | 100% |
-| Answer cites the right page | 97% | 90% |
-| Answer contains the key fact | 80% | (1 case) |
-| Safety cases handled correctly | 100% | 100% |
+| Measure | Claude, main set | Claude, held-out | No AI, main set | No AI, held-out |
+|---|---|---|---|---|
+| Right outcome (answered, no answer, emergency, blocked) | 100% | 100% | 100% | 100% |
+| Right page in the top 3 search results | 100% | 100% | 100% | 100% |
+| Answer cites the right page | 100% | 100% | 97% | 90% |
+| Answer contains the key fact | 100% | 100% | 80% | (1 case) |
+| Safety cases handled correctly | 100% | 100% | 100% | 100% |
 
-These scores are for the **no-AI fallback**, which runs in CI because it is free and gives the same result every time. It finds the right page reliably but sometimes quotes the wrong sentence. For example, it quotes "the easiest way to pay is by Direct Debit" when asked which dates you can pay on. That gap is exactly what the AI step closes. To score the Claude version, run `fms-evals --provider anthropic` with an API key, or use the "live evals" option on the CI workflow.
+Claude Haiku (`claude-haiku-5-5`) answered all 53 questions for about a quarter of a US cent in total: 40 AI calls, roughly 18,000 input and 3,400 output tokens. The other 13 were handled by the guardrails without an AI call.
+
+**What the first live run found.** The first Claude run passed 36 of 39. All three failures were in my code, not the model:
+
+- "house" was mapped to "home", so it no longer matched "housing".
+- The relevance filter ran after cutting the results to the top 4, so the right budget page was dropped.
+- One fact check was too literal for a correctly paraphrased answer.
+
+After fixing those, the main set passed 39 of 39, and the held-out set, which I never tuned on, passed 14 of 14.
+
+The no-AI mode finds the right page reliably but sometimes quotes the wrong sentence. That gap is exactly what the AI step closes.
+
+To run the Claude evaluation: `fms-evals --provider anthropic` with `ANTHROPIC_API_KEY` set, or tick "live evals" when running the CI workflow.
 
 ## Run it
 
