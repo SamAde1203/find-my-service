@@ -1,0 +1,12 @@
+services:
+  find-my-service:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      # Leave ANTHROPIC_API_KEY unset to run without AI (search and quote only).
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      FMS_DAILY_BUDGET_USD: ${FMS_DAILY_BUDGET_USD:-2.00}
+      FMS_RATE_LIMIT_PER_MINUTE: ${FMS_RATE_LIMIT_PER_MINUTE:-10}
+    read_only: true
+    restart: unless-stopped

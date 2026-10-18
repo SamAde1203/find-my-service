@@ -1,0 +1,254 @@
+[
+  {
+    "id": "420f6af18f",
+    "url": "https://localgov-council.ddev.site",
+    "page_title": "Demo City Council",
+    "heading": "Welcome to Demo City Council",
+    "text": "Find information and services from the council. Start with one of the topics below. This is a demonstration site for a portfolio project. It is not a real council. Read our accessibility statement."
+  },
+  {
+    "id": "d9c6b58d1a",
+    "url": "https://localgov-council.ddev.site/publications/annual-budget-2026-2027",
+    "page_title": "Annual budget 2026 to 2027",
+    "heading": "Documents",
+    "text": "HTML Read the budget online. The web version works with screen readers and on phones. A PDF version is also available."
+  },
+  {
+    "id": "5b9f78e3fc",
+    "url": "https://localgov-council.ddev.site/about-website/accessibility-statement",
+    "page_title": "Accessibility statement",
+    "heading": null,
+    "text": "How accessible this website is, what to do if you have a problem and how to ask for another format. This accessibility statement applies to the Demo City Council website. Demo City Council is fictional: this website is a portfolio project."
+  },
+  {
+    "id": "775cdc5b73",
+    "url": "https://localgov-council.ddev.site/about-website/accessibility-statement",
+    "page_title": "Accessibility statement",
+    "heading": "Using this website",
+    "text": "We want as many people as possible to be able to use this website. For example, you should be able to: Zoom in up to 400% without the text spilling off the screen. Navigate the whole website using just a keyboard. Listen to most of the website using a screen reader."
+  },
+  {
+    "id": "c3c47fd3dd",
+    "url": "https://localgov-council.ddev.site/about-website/accessibility-statement",
+    "page_title": "Accessibility statement",
+    "heading": "How accessible this website is",
+    "text": "We test every page against the Web Content Accessibility Guidelines (WCAG) version 2.2 AA standard, with automated checks on every change. We know some parts are not fully accessible: Some older PDF documents may not work well with screen readers. We have not yet tested the website with every screen reader."
+  },
+  {
+    "id": "653aeeef55",
+    "url": "https://localgov-council.ddev.site/about-website/accessibility-statement",
+    "page_title": "Accessibility statement",
+    "heading": "Asking for information in a different format",
+    "text": "If you need a document in a different format, such as large print, Easy Read, audio or braille, use the \"Request an accessible format\" link under the document. We will reply within 10 working days."
+  },
+  {
+    "id": "f57d534aee",
+    "url": "https://localgov-council.ddev.site/about-website/accessibility-statement",
+    "page_title": "Accessibility statement",
+    "heading": "Enforcement procedure",
+    "text": "The Equality and Human Rights Commission (EHRC) is responsible for enforcing the accessibility regulations. If you are not happy with how we respond to your complaint, contact the Equality Advisory and Support Service (EASS)."
+  },
+  {
+    "id": "9e92fcf033",
+    "url": "https://localgov-council.ddev.site/about-website/accessibility-statement",
+    "page_title": "Accessibility statement",
+    "heading": "Preparation of this statement",
+    "text": "This statement was prepared in October 2026. The website was last tested in October 2026. The results are in the accessibility audit report published with the code."
+  },
+  {
+    "id": "cc4e054f35",
+    "url": "https://localgov-council.ddev.site/bins-and-recycling",
+    "page_title": "Bins and recycling",
+    "heading": "Contact this service",
+    "text": "Send us a message. 0300 123 4567. Opening times Monday to Friday, 9am to 5pm"
+  },
+  {
+    "id": "92c2e1da8f",
+    "url": "https://localgov-council.ddev.site/council-tax",
+    "page_title": "Council Tax",
+    "heading": "Contact this service",
+    "text": "Send us a message. 0300 123 4567. Opening times Monday to Friday, 9am to 5pm"
+  },
+  {
+    "id": "a2715a84bd",
+    "url": "https://localgov-council.ddev.site/housing",
+    "page_title": "Housing",
+    "heading": "Contact this service",
+    "text": "Send us a message. 0300 123 4567. Opening times Monday to Friday, 9am to 5pm"
+  },
+  {
+    "id": "1a15eb7213",
+    "url": "https://localgov-council.ddev.site/roads-parking-and-travel",
+    "page_title": "Roads, parking and travel",
+    "heading": "Contact this service",
+    "text": "Send us a message. 0300 123 4567. Opening times Monday to Friday, 9am to 5pm"
+  },
+  {
+    "id": "c36db25217",
+    "url": "https://localgov-council.ddev.site/about-website",
+    "page_title": "About this website",
+    "heading": "Contact this service",
+    "text": "Send us a message. 0300 123 4567. Opening times Monday to Friday, 9am to 5pm"
+  },
+  {
+    "id": "173312c641",
+    "url": "https://localgov-council.ddev.site/publications/annual-budget-2026-2027/annual-budget-2026-2027",
+    "page_title": "Annual budget 2026 to 2027",
+    "heading": null,
+    "text": "The council plans to spend £412 million on services in 2026 to 2027. Most of the budget pays for care and support for adults and children."
+  },
+  {
+    "id": "143e09416e",
+    "url": "https://localgov-council.ddev.site/bins-and-recycling/find-your-bin-collection-day",
+    "page_title": "Find your bin collection day",
+    "heading": null,
+    "text": "Enter your postcode to see your next black, blue and brown bin collections. We collect black bins and brown bins one week, and blue bins the next. Find your bin collection day by entering your postcode."
+  },
+  {
+    "id": "d91f7e5262",
+    "url": "https://localgov-council.ddev.site/bins-and-recycling/find-your-bin-collection-day",
+    "page_title": "Find your bin collection day",
+    "heading": "When to put your bins out",
+    "text": "Put your bins out by 7am on your collection day, with the lid closed. Bring them back in the same day."
+  },
+  {
+    "id": "3cdd9b6337",
+    "url": "https://localgov-council.ddev.site/bins-and-recycling/what-goes-each-bin",
+    "page_title": "What goes in each bin",
+    "heading": null,
+    "text": "Check which bin to use for paper, plastic, glass, food and garden waste."
+  },
+  {
+    "id": "dc45dab45f",
+    "url": "https://localgov-council.ddev.site/bins-and-recycling/what-goes-each-bin",
+    "page_title": "What goes in each bin",
+    "heading": "Blue bin",
+    "text": "Paper and cardboard. Food and drink cans. Glass bottles and jars. Plastic bottles."
+  },
+  {
+    "id": "1e0016dfe3",
+    "url": "https://localgov-council.ddev.site/bins-and-recycling/what-goes-each-bin",
+    "page_title": "What goes in each bin",
+    "heading": "Black bin",
+    "text": "General household waste that cannot be recycled."
+  },
+  {
+    "id": "2f6f680fb3",
+    "url": "https://localgov-council.ddev.site/bins-and-recycling/what-goes-each-bin",
+    "page_title": "What goes in each bin",
+    "heading": "Brown bin",
+    "text": "Garden waste, such as grass cuttings, hedge trimmings and leaves. You need a garden waste subscription."
+  },
+  {
+    "id": "2a49fa48eb",
+    "url": "https://localgov-council.ddev.site/bins-and-recycling/report-missed-bin-collection",
+    "page_title": "Report a missed bin collection",
+    "heading": null,
+    "text": "Tell us if we did not empty your bin on your collection day. Report a missed bin by 5pm on the working day after your collection day. Before you report it, check: Your collection day. That your bin was out by 7am. That the lid was closed."
+  },
+  {
+    "id": "18f960294f",
+    "url": "https://localgov-council.ddev.site/bins-and-recycling/order-new-or-replacement-bin",
+    "page_title": "Order a new or replacement bin",
+    "heading": null,
+    "text": "Order a bin if yours is lost, stolen or damaged, or you have moved into a new home. A replacement black or blue bin is free if yours was damaged during a collection. We deliver new bins within 10 working days."
+  },
+  {
+    "id": "968014181b",
+    "url": "https://localgov-council.ddev.site/council-tax/council-tax-bands-and-charges",
+    "page_title": "Council Tax bands and charges",
+    "heading": null,
+    "text": "See how much Council Tax you will pay in 2026 to 2027 for each band. Your Council Tax band depends on the value of your home on 1 April 1991. Council Tax charges 2026 to 2027. Band: A, Annual charge: £1,520.12. Band: B, Annual charge: £1,773.47. Band: C, Annual charge: £2,026.83. Band: D, Annual charge: £2,280.18. Band: E, Annual charge: £2,786.89. Band: F, Annual charge: £3,293.59. Band: G, Annual charge: £3,800.30. Band: H, Annual charge: £4,560.36. The same charges are available to download:"
+  },
+  {
+    "id": "ce428a64b0",
+    "url": "https://localgov-council.ddev.site/council-tax/pay-your-council-tax",
+    "page_title": "Pay your Council Tax",
+    "heading": null,
+    "text": "Pay online, by Direct Debit or by phone. The easiest way to pay is by Direct Debit. You can choose to pay on the 1st, 15th or 28th of the month."
+  },
+  {
+    "id": "ffcd031088",
+    "url": "https://localgov-council.ddev.site/council-tax/pay-your-council-tax",
+    "page_title": "Pay your Council Tax",
+    "heading": "Other ways to pay",
+    "text": "Online with a debit or credit card. By phone using our automated line. At any Post Office with your bill."
+  },
+  {
+    "id": "cff899868e",
+    "url": "https://localgov-council.ddev.site/council-tax/discounts-and-exemptions",
+    "page_title": "Discounts and exemptions",
+    "heading": null,
+    "text": "Find out if you can pay less Council Tax. You may be able to get a discount if: You live on your own (25% off). Everyone in your home is a full-time student. You are on a low income."
+  },
+  {
+    "id": "fc3f080468",
+    "url": "https://localgov-council.ddev.site/housing/report-repair-your-council-home",
+    "page_title": "Report a repair to your council home",
+    "heading": null,
+    "text": "Report a repair if you rent your home from the council. Report emergency repairs by phone at any time, day or night. Emergencies include: No heating or hot water. A gas leak (call the National Gas Emergency Service first). Flooding or a burst pipe. Report other repairs online. We aim to fix routine repairs within 20 working days."
+  },
+  {
+    "id": "9580bb2eec",
+    "url": "https://localgov-council.ddev.site/housing/apply-council-housing",
+    "page_title": "Apply for council housing",
+    "heading": null,
+    "text": "Who can apply for council housing, how to apply and how homes are offered."
+  },
+  {
+    "id": "201de05530",
+    "url": "https://localgov-council.ddev.site/housing/apply-council-housing",
+    "page_title": "Apply for council housing",
+    "heading": "Overview",
+    "text": "This guide explains who can apply for council housing, how to apply and how homes are offered."
+  },
+  {
+    "id": "c1ca6a1b91",
+    "url": "https://localgov-council.ddev.site/roads-parking-and-travel/report-pothole",
+    "page_title": "Report a pothole",
+    "heading": null,
+    "text": "Tell us about a pothole or damaged pavement. Report a pothole if it is on a road or pavement in Demo City. We inspect dangerous potholes within 24 hours and fix them within 5 working days."
+  },
+  {
+    "id": "3a4a253990",
+    "url": "https://localgov-council.ddev.site/roads-parking-and-travel/apply-resident-parking-permit",
+    "page_title": "Apply for a resident parking permit",
+    "heading": null,
+    "text": "Apply for a permit to park in a resident parking zone. A resident parking permit costs £60 a year for your first vehicle. You need your vehicle registration number and proof that you live in the zone."
+  },
+  {
+    "id": "5605844aa3",
+    "url": "https://localgov-council.ddev.site/publications/annual-budget-2026-2027/annual-budget-2026-2027/where-money-goes",
+    "page_title": "Annual budget 2026 to 2027 Where the money goes",
+    "heading": null,
+    "text": "Planned spending 2026 to 2027. Service: Adult social care, Spending: £148 million. Service: Children's services, Spending: £96 million. Service: Waste and recycling, Spending: £31 million. Service: Roads and transport, Spending: £27 million. Service: Housing support, Spending: £22 million. Service: Other services, Spending: £88 million."
+  },
+  {
+    "id": "72065b2843",
+    "url": "https://localgov-council.ddev.site/publications/annual-budget-2026-2027/annual-budget-2026-2027/where-money-comes",
+    "page_title": "Annual budget 2026 to 2027 Where the money comes from",
+    "heading": null,
+    "text": "Council Tax pays for about half of our services. The rest comes from business rates, government grants and fees and charges."
+  },
+  {
+    "id": "d8e465bb43",
+    "url": "https://localgov-council.ddev.site/housing/apply-council-housing/who-can-apply",
+    "page_title": "Apply for council housing",
+    "heading": "Who can apply",
+    "text": "You can apply if you are 16 or over and have lived in Demo City for at least 2 years. You may be able to apply sooner if you have a strong local connection, such as close family or work in the city."
+  },
+  {
+    "id": "d9963c27f7",
+    "url": "https://localgov-council.ddev.site/housing/apply-council-housing/how-apply",
+    "page_title": "Apply for council housing",
+    "heading": "How to apply",
+    "text": "Apply online. You need: Details of everyone who will live with you. Your income and savings. Your addresses for the last 5 years. If you need help to apply, phone us or visit a library."
+  },
+  {
+    "id": "c511151e3a",
+    "url": "https://localgov-council.ddev.site/housing/apply-council-housing/how-homes-are-offered",
+    "page_title": "Apply for council housing",
+    "heading": "How homes are offered",
+    "text": "We place your application in a band from A to D, based on how urgently you need to move. Each week we advertise available homes. You can bid for up to 3 homes a week."
+  }
+]

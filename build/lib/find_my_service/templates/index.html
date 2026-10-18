@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if error %}Error: {% endif %}{% if answer %}Answer: {% endif %}Find a council service - {{ council }}</title>
+  <style>
+    :root { --ink: #0b0c0c; --muted: #505a5f; --brand: #0b4f6c; --link: #14548a; --error: #b3261e; --focus: #ffdd00; --border: #b1b4b6; --surface: #f3f5f6; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 1.1875rem/1.5 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; color: var(--ink); background: #fff; }
+    a { color: var(--link); text-underline-offset: 0.15em; }
+    a:focus, button:focus { outline: 3px solid transparent; background: var(--focus); box-shadow: 0 -2px var(--focus), 0 4px var(--ink); }
+    /* Focus moved by the page itself (to the answer or error summary) needs no highlight. */
+    [tabindex="-1"]:focus { outline: none; }
+    textarea:focus { background: #fff; outline: 3px solid var(--focus); box-shadow: inset 0 0 0 2px var(--ink); }
+    .skip, .visually-hidden { position: absolute; left: -9999px; }
+    .skip:focus { position: static; display: block; padding: 0.5rem 1rem; }
+    header { background: var(--brand); color: #fff; padding: 1rem; }
+    header p { margin: 0; font-weight: 700; font-size: 1.25rem; }
+    main { max-width: 42rem; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+    h1 { font-size: 2.25rem; line-height: 1.15; margin: 1rem 0; }
+    h2 { font-size: 1.5rem; margin: 2rem 0 0.75rem; }
+    .lead { font-size: 1.25rem; }
+    label { display: block; font-weight: 700; margin-bottom: 0.25rem; }
+    .hint { color: var(--muted); margin: 0 0 0.5rem; }
+    .field--error { border-left: 5px solid var(--error); padding-left: 1rem; }
+    .field-error { color: var(--error); font-weight: 700; margin: 0 0 0.5rem; }
+    textarea { width: 100%; font: inherit; padding: 0.5rem; border: 2px solid var(--ink); min-height: 6rem; }
+    button { margin-top: 1rem; font: inherit; font-weight: 600; color: #fff; background: #00703c; border: 0; padding: 0.6rem 1.2rem; box-shadow: 0 2px 0 #002d18; cursor: pointer; }
+    button:focus { color: var(--ink); }
+    .error-summary { border: 5px solid var(--error); padding: 1rem 1.25rem; margin-bottom: 1.5rem; }
+    .error-summary h2 { margin-top: 0; }
+    .answer { border-left: 5px solid var(--brand); background: var(--surface); padding: 1rem 1.25rem; }
+    .answer--warning { border-left-color: var(--error); }
+    .note { color: var(--muted); font-size: 1rem; }
+    ol.sources { padding-left: 1.5rem; }
+    footer { border-top: 1px solid var(--border); padding: 1rem; color: var(--muted); font-size: 1rem; text-align: center; }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header><p>{{ council }}</p></header>
+  <main id="main" tabindex="-1">
+    {% if error %}
+    <div class="error-summary" role="alert" aria-labelledby="error-summary-title" tabindex="-1" id="error-summary">
+      <h2 id="error-summary-title">There is a problem</h2>
+      <p><a href="#question">{{ error }}</a></p>
+    </div>
+    {% endif %}
+
+    <h1>Find a council service</h1>
+    <p class="lead">Ask a question about council services, such as bins, Council Tax, housing or parking. Answers come from the {{ council }} website.</p>
+
+    <form method="post" action="/" novalidate>
+      <div class="{% if error %}field--error{% endif %}">
+        <label for="question">Your question</label>
+        <p class="hint" id="question-hint">For example, "When should I put my bins out?" Do not include personal details, such as your name or account number.</p>
+        {% if error %}<p class="field-error" id="question-error"><span class="visually-hidden">Error: </span>{{ error }}</p>{% endif %}
+        <textarea id="question" name="question" maxlength="{{ max_chars }}" rows="3"
+          aria-describedby="question-hint{% if error %} question-error{% endif %}">{{ question }}</textarea>
+      </div>
+      <button type="submit">Ask</button>
+    </form>
+
+    {% if answer %}
+    <section aria-labelledby="answer-title">
+      <h2 id="answer-title" tabindex="-1">Answer</h2>
+      <div class="answer{% if answer.outcome == 'emergency' %} answer--warning{% endif %}">
+        <p>{{ answer.text }}</p>
+      </div>
+      {% if answer.sources %}
+      <h3>Sources</h3>
+      <ol class="sources">
+        {% for source in answer.sources %}
+        <li value="{{ source.number }}"><a href="{{ source.url }}">{{ source.title }}</a></li>
+        {% endfor %}
+      </ol>
+      <p class="note">This answer was written automatically from the pages above. Check the page before you act on it.</p>
+      {% endif %}
+    </section>
+    {% endif %}
+  </main>
+  <footer>A portfolio project. {{ council }} is fictional.</footer>
+  <script>
+    // After a submission, move focus to the result so screen reader users hear it.
+    (document.getElementById('error-summary') || document.getElementById('answer-title'))?.focus();
+  </script>
+</body>
+</html>
