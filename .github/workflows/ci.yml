@@ -52,7 +52,18 @@ jobs:
         if: inputs.live_evals
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: fms-evals --provider anthropic --report evals/report-claude.md
+        run: fms-evals --provider anthropic --report evals/report-claude.md 2>&1 | tee /tmp/live.log
+        shell: bash -o pipefail {0}
+      - name: Show live evaluation results as annotations
+        if: always() && inputs.live_evals
+        run: |
+          python3 - <<'PY'
+          import os
+          for name in ("evals/report-claude.md", "/tmp/live.log"):
+              if os.path.exists(name):
+                  text = open(name, errors="replace").read()[-3500:]
+                  print(f"::notice title={os.path.basename(name)}::" + text.replace("%", "%25").replace("\n", "%0A"))
+          PY
       - name: Add reports to the run summary
         if: always()
         run: cat evals/report*.md >> "$GITHUB_STEP_SUMMARY"

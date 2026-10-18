@@ -19,6 +19,7 @@ from __future__ import annotations
 
 import argparse
 import sys
+from collections import Counter
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
@@ -44,6 +45,8 @@ class CaseResult:
     checks: dict[str, bool] = field(default_factory=dict)
     answer: str = ""
     cited: list[str] = field(default_factory=list)
+    provider: str = ""
+    flags: list[str] = field(default_factory=list)
 
     @property
     def passed(self) -> bool:
@@ -68,6 +71,8 @@ def evaluate_case(case: dict[str, Any], assistant: Assistant) -> CaseResult:
         expected=expected,
         answer=answer.text,
         cited=[_path(s.url) for s in answer.sources],
+        provider=answer.provider,
+        flags=answer.flags,
     )
     result.checks["outcome"] = answer.outcome.value in expected
 
@@ -123,6 +128,11 @@ def report_markdown(
         lines.append(
             f"| {name} | {score:.0%} | {need:.0%} | {'pass' if score >= need else 'FAIL'} |"
         )
+    providers = Counter(r.provider for r in results)
+    flags = Counter(f for r in results for f in r.flags if not f.startswith("redacted:"))
+    lines += ["", "Answered by: " + ", ".join(f"{k} {v}" for k, v in sorted(providers.items()))]
+    if flags:
+        lines += ["Flags: " + ", ".join(f"{k} {v}" for k, v in sorted(flags.items()))]
     failed = [r for r in results if not r.passed]
     if failed:
         lines += [
