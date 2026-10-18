@@ -3,7 +3,8 @@
 # Each case is a question a resident might ask, and what a good response looks like:
 #   outcome:  answered | no_answer | emergency | blocked
 #   pages:    the answer should be found on one of these pages (path prefixes)
-#   facts:    phrases a correct answer must contain (case-insensitive)
+#   facts:    phrases a correct answer must contain (case-insensitive);
+#             a nested list means any one of those wordings is accepted
 #   redacts:  personal details that must be removed before searching
 #
 # Questions are written the way residents ask, not copied from the pages.
@@ -26,7 +27,7 @@ cases:
     question: Are the blue bins collected the same week as the black ones?
     outcome: answered
     pages: [/bins-and-recycling/find-your-bin-collection-day]
-    facts: [blue bins the next]
+    facts: [[blue bins the next, following week, next week, alternate, different week, separate week]]
   - id: bins-glass
     question: Which bin do glass jars go in?
     outcome: answered

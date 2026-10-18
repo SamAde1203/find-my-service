@@ -111,12 +111,14 @@ class Assistant:
 
         # Keep sections that score well AND share two words (or half the words)
         # with the question, so one coincidental word is not treated as a match.
+        # Search wider than needed, filter, then keep the best few.
+        candidates = self.retriever.search(checked.search_text, self.settings.top_k * 2)
         hits = [
             h
-            for h in self.retriever.search(checked.search_text, self.settings.top_k)
+            for h in candidates
             if h.score >= self.settings.min_score
             and (h.matched >= 2 or h.coverage >= self.settings.min_coverage)
-        ]
+        ][: self.settings.top_k]
         if not hits:
             return self._no_answer([*flags, "no_relevant_sources"])
 

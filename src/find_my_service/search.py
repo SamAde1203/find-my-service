@@ -131,7 +131,6 @@ SYNONYMS = {
     "cheaper": "discount",
     "reduction": "discount",
     "flat": "home",
-    "house": "home",
     "property": "home",
     "fix": "repair",
     "broken": "repair",

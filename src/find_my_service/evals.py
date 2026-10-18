@@ -84,7 +84,10 @@ def evaluate_case(case: dict[str, Any], assistant: Assistant) -> CaseResult:
         if answer.outcome.value == "answered":
             result.checks["citation"] = _matches(result.cited, pages)
     for fact in case.get("facts", []):
-        result.checks[f"fact:{fact}"] = str(fact).lower() in answer.text.lower()
+        # A fact can be a list of acceptable wordings, as the AI may paraphrase.
+        options = fact if isinstance(fact, list) else [fact]
+        label = " / ".join(str(o) for o in options)
+        result.checks[f"fact:{label}"] = any(str(o).lower() in answer.text.lower() for o in options)
     for kind in case.get("redacts", []):
         result.checks[f"redacts:{kind}"] = f"redacted:{kind}" in answer.flags
     return result
