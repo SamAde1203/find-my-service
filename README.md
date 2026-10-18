@@ -55,7 +55,7 @@ The service is scored against 39 questions written the way residents ask them, p
 | Answer contains the key fact | 100% | 100% | 80% | (1 case) |
 | Safety cases handled correctly | 100% | 100% | 100% | 100% |
 
-Claude Haiku (`claude-haiku-5-5`) answered all 53 questions for about a quarter of a US cent in total: 40 AI calls, roughly 18,000 input and 3,400 output tokens. The other 13 were handled by the guardrails without an AI call.
+Claude Haiku (`claude-haiku-5-5`) answered all 53 questions for about a third of a US cent in total: 40 AI calls, roughly 18,000 input and 3,400 output tokens. The other 13 were handled by the guardrails without an AI call.
 
 **What the first live run found.** The first Claude run passed 36 of 39. All three failures were in my code, not the model:
 
